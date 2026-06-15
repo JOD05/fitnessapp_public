@@ -23,6 +23,8 @@
   h2{font-size:21px; margin:44px 0 6px; letter-spacing:-0.2px}
   h3{font-size:15px; margin:26px 0 4px; color:var(--text)}
   p{margin:10px 0; color:#D7D5CD}
+  ul{margin:10px 0; padding-left:22px; color:#D7D5CD}
+  li{margin:5px 0}
   .lead{color:var(--text); font-size:17px}
   a{color:var(--ember)}
   .section{border-top:1px solid var(--line); margin-top:40px; padding-top:8px}
@@ -36,32 +38,52 @@
   <header>
     <p class="kicker">Legal</p>
     <h1>Ascent — Privacy Policy &amp; Terms of Use</h1>
-    <p class="meta"><strong>Effective date:</strong> June 14, 2026</p>
+    <p class="meta"><strong>Effective date:</strong> June 15, 2026</p>
     <p class="meta"><strong>Provided by:</strong> James Demoya</p>
     <p class="meta"><strong>Contact:</strong> <a href="mailto:jamesdemoya@gmail.com">jamesdemoya@gmail.com</a></p>
   </header>
 
   <div class="section">
     <h2>Privacy Policy</h2>
-    <p class="lead">The short version: Ascent keeps your data on your own device. There are no accounts, we don't collect your information, and nothing you log is sent to us.</p>
+    <p class="lead">Ascent uses an account so your training data follows you across devices. Your data is stored securely in the cloud, tied to your account, and is never sold or used for advertising. Two optional features send data to an AI service to give you estimates. The details are below.</p>
+
+    <h3>Your account</h3>
+    <p>To use Ascent you create an account using your email address and a password, or with Sign in with Apple. We use this only to authenticate you and to associate your data with you. If you use Sign in with Apple, Apple may provide a private relay email rather than your real address.</p>
 
     <h3>What the app stores</h3>
-    <p>The app stores the following <strong>locally on your device only</strong>: your logged workouts and completed sessions, bodyweight entries, strength and mobility benchmarks, nutrition logs, target macros, and your supplement checklist.</p>
+    <p>When you use Ascent, the following information is stored in your account: your profile (name, and the height, age, and sex used for energy estimates), your goals and targets, your supplement list, your generated or custom workout programs, your logged workouts and sets, bodyweight and body-fat entries, and nutrition entries. A copy is also cached on your device so the app works offline; the cloud copy is the source of truth across your devices.</p>
 
-    <h3>What we collect</h3>
-    <p>Nothing. The app does not require an account, does not transmit your personal data to us or any server we control, and contains no advertising, no analytics, and no third-party tracking. We have no access to anything you enter.</p>
+    <h3>Where your data is stored</h3>
+    <p>Your account and data are stored using <strong>Supabase</strong>, a cloud database and authentication provider, on infrastructure they operate. Access is restricted by per-user security rules so that each account can only access its own data. Supabase processes this data on our behalf; see <a href="https://supabase.com/privacy">Supabase's privacy policy</a>.</p>
 
-    <h3>How your data is stored and deleted</h3>
-    <p>All data lives in the app's local storage on your device. You can erase it at any time by clearing the app's data or deleting the app. Because we never receive your data, there is nothing for us to retain or delete on our end.</p>
+    <h3>AI estimate features (optional)</h3>
+    <p>Two features send data off your device to produce an estimate. They run only when you choose to use them:</p>
+    <ul>
+      <li><strong>Meal photo estimate.</strong> If you take or select a meal photo, the image is sent through our processing endpoint (hosted on <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare</a>) to <strong>Anthropic's API</strong>, which returns an approximate calorie and protein range. The photo is processed to produce the estimate and is <strong>not stored</strong> by our endpoint.</li>
+      <li><strong>AI program setup.</strong> If you use the "Describe what you want" / "Set up with AI" option, the text you enter is sent through the same endpoint to Anthropic to suggest training settings. It is used to generate suggestions and is not stored by our endpoint.</li>
+    </ul>
+    <p>Anthropic processes this data to return a result and, per its commercial terms, does not use API inputs or outputs to train its models. See <a href="https://www.anthropic.com/legal/privacy">Anthropic's privacy policy</a>. If you never use these features, no images or goal text leave your device for AI processing.</p>
+
+    <h3>Barcode lookups (optional)</h3>
+    <p>If you scan a product barcode, the barcode is sent to <strong>Open Food Facts</strong>, an open food database, to retrieve nutrition information. No account or personal data is included in that lookup. See <a href="https://world.openfoodfacts.org/privacy">Open Food Facts' privacy policy</a>.</p>
+
+    <h3>What we don't do</h3>
+    <p>We do not sell your data. The app contains no advertising and no third-party tracking or analytics. We do not share your data except with the service providers above that are necessary to run the app (cloud storage, the AI estimate features, and barcode lookups), each acting on our behalf or on your explicit action.</p>
+
+    <h3>Retention and deleting your data</h3>
+    <p>Your data is retained while your account is active. You can <strong>delete your account at any time from within the app</strong> (Settings → Delete account), which removes your account and the data associated with it from the cloud database. You can also clear the on-device copy by deleting the app. To request deletion or ask a question, email <a href="mailto:jamesdemoya@gmail.com">jamesdemoya@gmail.com</a>.</p>
+
+    <h3>Security</h3>
+    <p>Data is transmitted over encrypted connections and stored with per-user access controls. No system is perfectly secure, but we use these standard protections and store only what the app needs to function.</p>
 
     <h3>App distribution and updates</h3>
-    <p>The app is distributed through Apple's TestFlight and/or App Store. Apple may collect limited information as part of providing those services and app updates, governed by <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>. If a future version adds any feature that transmits data off your device (for example cloud sync, analytics, or a connected service), this policy will be updated and consent obtained where required.</p>
+    <p>The app is distributed through Apple's TestFlight and/or App Store. Apple may collect limited information as part of providing those services, governed by <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>.</p>
 
     <h3>Children</h3>
     <p>This app is not directed to children under 13, and we do not knowingly collect information from them.</p>
 
     <h3>Changes</h3>
-    <p>We may update this policy. Material changes will be reflected by a new effective date above.</p>
+    <p>We may update this policy as the app evolves. Material changes will be reflected by a new effective date above.</p>
   </div>
 
   <div class="section">
@@ -70,6 +92,9 @@
 
     <h3>Not medical advice</h3>
     <p>Ascent provides general fitness, exercise, nutrition, and supplement information for <strong>educational and informational purposes only</strong>. It is <strong>not medical advice</strong> and is not a substitute for professional guidance from a physician, registered dietitian, or other qualified healthcare provider. Always consult a qualified professional before beginning any exercise program, changing your diet, or starting any supplement — especially if you have an existing medical condition, are pregnant, or take medication.</p>
+
+    <h3>Estimates are approximate</h3>
+    <p>Calorie, macro, and energy figures in the app — including AI photo estimates and any energy-balance readouts — are <strong>rough approximations, not precise measurements</strong>, and should be treated as general guidance only. Do not rely on them for medical or clinical decisions.</p>
 
     <h3>Assumption of risk</h3>
     <p>Physical exercise carries an inherent risk of injury. You voluntarily choose to participate and do so <strong>at your own risk</strong>. You are responsible for exercising within your own limits, using proper form and equipment, and stopping if you experience pain, dizziness, or discomfort. To the fullest extent permitted by law, James Demoya is not liable for any injury, loss, or damage arising from your use of the app or the information it contains.</p>
